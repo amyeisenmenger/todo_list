@@ -2,8 +2,11 @@
 <p><%= link_to 'New Item', new_list_path %></p>
 <% @lists.each do |list| %>
   <h2><%= list.name %></h2>
-  <p><%= list.action %></p>
+  <h3> Status </h3>
+  <%= list.status ? "Completed" : "Working on it..." %><br>
+  <h3> Priority </h3>
+  <%= list.priority %><br>
+  <br>
   <%= link_to 'Show List', list_path(list) %>
   <%= link_to 'Edit List', edit_list_path(list) %>
-  <%= link_to 'Delete List', list, method: :delete %>
 <% end %>

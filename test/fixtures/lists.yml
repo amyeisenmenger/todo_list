@@ -3,7 +3,9 @@
 one:
   name: MyString
   action: MyText
+  status: false
 
 two:
   name: MyString
   action: MyText
+  status: false

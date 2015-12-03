@@ -1,10 +1,19 @@
 <h1> Edit List </h1>
 <%= form_for @list do |f| %>
+  <%= f.label :status %>
+  <%= f.check_box :status %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
   <%= f.label :action %>
   <%= f.text_field :action %>
 
+  <%= f.label :priority %>
+  <%= f.number_field :priority %>
+
   <%= f.submit %>
 <% end %>
+
+<%= link_to 'Back', lists_path %>
+<%= link_to 'Delete List', @list, method: :delete %>

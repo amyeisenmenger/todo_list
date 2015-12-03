@@ -41,9 +41,10 @@ class ListsController < ApplicationController
     redirect_to lists_path
   end
 
+
   private
 
   def list_params
-    params.require(:list).permit(:name, :action)
+    params.require(:list).permit(:name, :action, :status, :priority)
   end
 end
